@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: conflux-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: MONGO_URI
+        sync: false      # set in the Render dashboard (MongoDB Atlas URI)
+      - key: CORS_ORIGIN
+        sync: false      # set to your deployed frontend origin

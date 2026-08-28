@@ -1,0 +1,26 @@
+/*
+ * Layout and visual styling now live in the MUI theme (src/theme.js) and in
+ * component-level `sx` props. This file is kept only for app-wide animations
+ * that are simpler to express as plain CSS.
+ */
+
+@keyframes conflux-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes conflux-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
